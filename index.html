@@ -3,14 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEKOPIN · Estudio Creativo Multidisciplinario</title>
+  <title>NEKOPIN · Estudio Creativo</title>
   
-  <!-- Tipografías Oficiales -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600;1,800&display=swap" rel="stylesheet">
-  
-  <!-- Hoja de Estilos Externa -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,9 +31,9 @@
       <div class="container">
         <img src="nekopinlogo.png" alt="Nekopin" class="hero-main-logo">
         <br>
-        <span class="hero-badge">Estudio Creativo &bull; Marca Paraguas</span>
+        <span class="hero-badge">Estudio Creativo</span>
         <h1>Ideas que se hacen realidad</h1>
-        <p>Proporcionamos infraestructura, rigor técnico y diseño para transformar conceptos en educación, software, videojuegos e historias.</p>
+        <p>Proporcionamos estructura, diseño y desarrollo para convertir conceptos en software funcional, experiencias educativas y juegos físicos o digitales.</p>
         <div class="slogan-pill">«Cercana en el trato. Seria en el compromiso.»</div>
       </div>
     </section>
@@ -46,91 +43,146 @@
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Nuestras Divisiones</h2>
-          <p class="section-desc">Cuatro áreas especializadas para dar forma a cada tipo de proyecto.</p>
+          <p class="section-desc">Espacios dedicados para dar forma a cada tipo de proyecto.</p>
         </div>
 
         <div class="divisions-grid">
-          <article class="card academy">
+          <article class="card academy" data-target="academy">
             <img src="nekopinacademy.png" alt="Nekopin Academy" class="card-logo">
             <h3>Nekopin Academy</h3>
-            <p>Capacitación técnica, cursos estructurados y experiencias educativas accesibles.</p>
+            <p>Formación práctica, talleres didácticos y recursos estructurados de aprendizaje.</p>
             <span class="card-tag">Educación & Formación</span>
           </article>
 
-          <article class="card code">
+          <article class="card code" data-target="code">
             <img src="nekopinCode.png" alt="Nekopin Code" class="card-logo">
             <h3>Nekopin Code</h3>
-            <p>Software a medida, sistemas locales offline, arquitectura web y soluciones digitales robustas.</p>
+            <p>Desarrollo a medida, sistemas locales offline, arquitectura web y soluciones claras.</p>
             <span class="card-tag">Software & Sistemas</span>
           </article>
 
-          <article class="card games">
+          <article class="card games" data-target="games">
             <img src="nekopinGames.png" alt="Nekopin Games" class="card-logo">
             <h3>Nekopin Games</h3>
-            <p>Desarrollo de videojuegos, mecánicas interactivas y entretenimiento experimental.</p>
-            <span class="card-tag">Juegos & Experiencias</span>
+            <p>Diseño de juegos de cartas físicos, experiencias de mesa y desarrollo de videojuegos independientes.</p>
+            <span class="card-tag">Mesa & Videojuegos</span>
           </article>
 
-          <article class="card stories">
+          <article class="card stories" data-target="stories">
             <img src="nekopinstories.png" alt="Nekopin Stories" class="card-logo">
             <h3>Nekopin Stories</h3>
-            <p>Creación editorial, narrativa de universos fantásticos y publicación literaria.</p>
-            <span class="card-tag">Editorial & Ficción</span>
+            <p>Laboratorio de narrativa, construcción de universos y proyectos literarios en desarrollo.</p>
+            <span class="card-tag">Narrativa & Ficción</span>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Proyectos / Portafolio -->
+    <!-- Ecosistema de Proyectos -->
     <section id="proyectos" class="portfolio-section">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Ecosistema de Proyectos</h2>
-          <p class="section-desc">Soluciones y desarrollos nacidos bajo la infraestructura de Nekopin.</p>
+          <p class="section-desc">Explora los sistemas construidos, recursos formativos e iniciativas en desarrollo.</p>
         </div>
 
-        <!-- Filtro JS -->
+        <!-- Filtros -->
         <div class="filter-controls">
           <button class="btn-filter active" data-filter="all">Todos</button>
-          <button class="btn-filter" data-filter="code">Nekopin Code</button>
           <button class="btn-filter" data-filter="academy">Nekopin Academy</button>
+          <button class="btn-filter" data-filter="code">Nekopin Code</button>
           <button class="btn-filter" data-filter="games">Nekopin Games</button>
           <button class="btn-filter" data-filter="stories">Nekopin Stories</button>
         </div>
 
         <div class="projects-grid">
-          <div class="project-card" data-category="code">
-            <div>
-              <div class="project-meta">
-                <span class="project-badge badge-code">Nekopin Code</span>
-              </div>
-              <h4>Sistema Alimentos Doña Eli</h4>
-              <p>Herramienta web a medida para gestión de pedidos, control de inventario y balances de ventas comerciales.</p>
-            </div>
-            <div class="project-endorse">Proyecto &bull; Desarrollado por NEKOPIN CODE</div>
-          </div>
-
-          <div class="project-card" data-category="code">
-            <div>
-              <div class="project-meta">
-                <span class="project-badge badge-code">Nekopin Code</span>
-              </div>
-              <h4>Pizza Troquer POS & KDS</h4>
-              <p>Módulo táctil para toma de comandas por niveles y despacho ágil de cocina en tiempo real.</p>
-            </div>
-            <div class="project-endorse">Proyecto &bull; Desarrollado por NEKOPIN CODE</div>
-          </div>
-
+          
+          <!-- Academy: Curso de Pantallas e Infancia -->
           <div class="project-card" data-category="academy">
             <div>
               <div class="project-meta">
                 <span class="project-badge badge-academy">Nekopin Academy</span>
               </div>
-              <h4>Talleres de Lógica y Código</h4>
-              <p>Módulos de capacitación interactiva para formación en desarrollo de software y computación.</p>
+              <h4>Pantallas e infancia: Cómo acompañar a tus hijos en el uso saludable de la tecnología</h4>
+              <p>Guía formativa y pedagógica orientada a padres de familia para el uso consciente, seguro y constructivo de dispositivos en el hogar.</p>
             </div>
-            <div class="project-endorse">Programa &bull; Impartido por NEKOPIN ACADEMY</div>
+            <div class="project-actions">
+              <!-- Reemplaza el href="#" por el enlace final cuando esté disponible -->
+              <a href="#" target="_blank" class="btn-action btn-link">Ir al Curso (En Construcción) &rarr;</a>
+            </div>
+            <div class="project-endorse">Formación · Creado por NEKOPIN ACADEMY</div>
           </div>
+
+          <!-- Code: Software para Pizzería -->
+          <div class="project-card" data-category="code">
+            <div>
+              <div class="project-meta">
+                <span class="project-badge badge-code">Nekopin Code</span>
+              </div>
+              <h4>Software para Gestión de Pizzería (POS & KDS)</h4>
+              <p>Sistema táctil de toma de pedidos multinivel en caja conectado en tiempo real con un monitor de despacho para cocina y cálculo de envíos.</p>
+            </div>
+            <div class="project-actions">
+              <button class="btn-action btn-preview" 
+                      data-title="Software para Gestión de Pizzería" 
+                      data-img="preview-pizzeria.png" 
+                      data-desc="Módulo táctil con navegación modal para tamaños e ingredientes, sincronización en tiempo real hacia el monitor de cocina y cierre contable diario.">
+                Ver Funcionamiento
+              </button>
+            </div>
+            <div class="project-endorse">Software · Desarrollado por NEKOPIN CODE</div>
+          </div>
+
+          <!-- Code: Software para Control de Inventario y Encargos -->
+          <div class="project-card" data-category="code">
+            <div>
+              <div class="project-meta">
+                <span class="project-badge badge-code">Nekopin Code</span>
+              </div>
+              <h4>Software para Control de Inventario y Encargos</h4>
+              <p>Plataforma para registro de pedidos multicanal, deducción automática de existencias al entregar y generación de reportes contables.</p>
+            </div>
+            <div class="project-actions">
+              <button class="btn-action btn-preview" 
+                      data-title="Software para Inventario y Encargos" 
+                      data-img="preview-inventario.png" 
+                      data-desc="Gestión de pedidos por redes sociales, autocompletado de clientes recurrentes y control de bodega sin descuadres.">
+                Ver Funcionamiento
+              </button>
+            </div>
+            <div class="project-endorse">Software · Desarrollado por NEKOPIN CODE</div>
+          </div>
+
+          <!-- Games: En Incubación -->
+          <div class="project-card" data-category="games">
+            <div>
+              <div class="project-meta">
+                <span class="project-badge badge-games">Nekopin Games</span>
+              </div>
+              <h4>Laboratorio de Juegos & Mesa</h4>
+              <p>Diseño de mecánicas de mesa, prototipos de cartas y experimentación lúdica en etapa de conceptualización.</p>
+            </div>
+            <div class="project-actions">
+              <span class="status-pill">En Desarrollo</span>
+            </div>
+            <div class="project-endorse">Prototipos · NEKOPIN GAMES</div>
+          </div>
+
+          <!-- Stories: En Incubación -->
+          <div class="project-card" data-category="stories">
+            <div>
+              <div class="project-meta">
+                <span class="project-badge badge-stories">Nekopin Stories</span>
+              </div>
+              <h4>Laboratorio Narrativo</h4>
+              <p>Exploración de relatos, ambientación y escritura de mundos en desarrollo.</p>
+            </div>
+            <div class="project-actions">
+              <span class="status-pill">En Desarrollo</span>
+            </div>
+            <div class="project-endorse">Editorial · NEKOPIN STORIES</div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -145,11 +197,23 @@
             <br><br>
             Pero toda idea merece ser escuchada, explorada y tratada con respeto. Nekopin existe para llevar esas ideas un paso más allá.»
           </p>
-          <div class="manifesto-footer">Una marca &bull; Cuatro caminos &bull; Infinitas ideas</div>
+          <div class="manifesto-footer">Una marca &bull; Infinitas ideas</div>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- Modal / Visor de Capturas -->
+  <div id="imageModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h3 id="modalTitle">Título del Proyecto</h3>
+      <div class="modal-img-wrap" id="modalImgWrap">
+        <!-- Imagen inyectada por JS -->
+      </div>
+      <p id="modalDesc">Descripción técnica de la herramienta.</p>
+    </div>
+  </div>
 
   <!-- Pie de página -->
   <footer>
@@ -161,11 +225,10 @@
         <a href="#manifiesto">Manifiesto</a>
         <a href="mailto:nekopinstudio@gmail.com">nekopinstudio@gmail.com</a>
       </div>
-      <p class="footer-copy">&copy; 2026 NEKOPIN &bull; Estudio Creativo. Todos los derechos reservados.</p>
+      <p class="footer-copy">Nekopin &bull; Estudio Creativo. Desarrollado con dedicación y rigor.</p>
     </div>
   </footer>
 
-  <!-- Script Externo -->
   <script src="main.js"></script>
 </body>
 </html>
