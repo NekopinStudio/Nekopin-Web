@@ -5,359 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NEKOPIN · Estudio Creativo Multidisciplinario</title>
   
-  <!-- Tipografías Oficiales: Nunito Sans & Inter -->
+  <!-- Tipografías Oficiales -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600;1,800&display=swap" rel="stylesheet">
   
-  <style>
-    :root {
-      --bg: #F8FAFC;
-      --card-bg: #FFFFFF;
-      --text: #0F172A;
-      --text-muted: #64748B;
-      --border: #E2E8F0;
-      --primary: #000000;
-      
-      /* Colores Oficiales del Manual de Marca */
-      --academy: #02488B;
-      --games: #422052;
-      --stories: #EFA400;
-      --code: #0285BD;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Nunito Sans', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* Header y Navegación */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      padding: 12px 0;
-    }
-    .nav-wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .brand-logo-header {
-      height: 44px;
-      width: auto;
-      object-fit: contain;
-      transition: transform 0.2s ease;
-    }
-    .brand-logo-header:hover {
-      transform: scale(1.03);
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: var(--text-muted);
-      font-weight: 700;
-      font-size: 15px;
-      transition: color 0.2s ease;
-    }
-    .nav-links a:hover {
-      color: var(--text);
-    }
-    .btn-header {
-      padding: 8px 18px;
-      background: var(--primary);
-      color: #FFFFFF !important;
-      border-radius: 999px;
-      font-size: 14px;
-      transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-    .btn-header:hover {
-      opacity: 0.9;
-      transform: translateY(-1px);
-    }
-
-    /* Hero Principal */
-    .hero {
-      text-align: center;
-      padding: 80px 0 60px;
-      background: radial-gradient(circle at 50% 10%, rgba(2, 133, 189, 0.06) 0%, transparent 70%);
-    }
-    .hero-main-logo {
-      height: 140px;
-      width: auto;
-      object-fit: contain;
-      margin-bottom: 24px;
-      filter: drop-shadow(0 8px 20px rgba(0,0,0,0.06));
-    }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 16px;
-      background: #E0F2FE;
-      color: var(--code);
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    .hero h1 {
-      font-size: 46px;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.5px;
-      margin-bottom: 16px;
-      color: var(--primary);
-    }
-    .hero p {
-      font-size: 20px;
-      color: var(--text-muted);
-      max-width: 680px;
-      margin: 0 auto 24px;
-    }
-    .slogan-pill {
-      display: inline-block;
-      font-style: italic;
-      font-weight: 700;
-      color: var(--text);
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      padding: 8px 20px;
-      border-radius: 999px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
-    }
-
-    /* Títulos de sección */
-    .section-header {
-      text-align: center;
-      margin-bottom: 36px;
-    }
-    .section-title {
-      font-size: 28px;
-      font-weight: 900;
-      margin-bottom: 8px;
-    }
-    .section-desc {
-      color: var(--text-muted);
-      font-size: 16px;
-    }
-
-    /* Grid Submarcas */
-    .divisions-section {
-      padding: 40px 0 80px;
-    }
-    .divisions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-    }
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 32px 24px;
-      transition: all 0.25s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 6px;
-    }
-    .card.academy::before { background: var(--academy); }
-    .card.code::before { background: var(--code); }
-    .card.games::before { background: var(--games); }
-    .card.stories::before { background: var(--stories); }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.08);
-      border-color: #CBD5E1;
-    }
-    .card-logo {
-      height: 100px;
-      width: auto;
-      object-fit: contain;
-      margin-bottom: 20px;
-    }
-    .card h3 {
-      font-size: 20px;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-    .card p {
-      font-size: 14.5px;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-      flex-grow: 1;
-    }
-    .card-tag {
-      font-family: 'Inter', sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 6px;
-      background: #F1F5F9;
-      color: #475569;
-    }
-
-    /* Portafolio y Proyectos */
-    .portfolio-section {
-      padding: 40px 0 80px;
-      background: #FFFFFF;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-    }
-    .project-card {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      background: var(--bg);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .project-meta {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-    .project-badge {
-      font-family: 'Inter', sans-serif;
-      font-size: 11px;
-      font-weight: 800;
-      text-transform: uppercase;
-      padding: 3px 8px;
-      border-radius: 4px;
-      color: #FFFFFF;
-    }
-    .badge-code { background: var(--code); }
-    .badge-games { background: var(--games); }
-    .badge-academy { background: var(--academy); }
-    .project-card h4 {
-      font-size: 18px;
-      font-weight: 800;
-      margin-bottom: 8px;
-    }
-    .project-card p {
-      font-size: 14px;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-    }
-    .project-endorse {
-      font-family: 'Inter', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      color: #94A3B8;
-      border-top: 1px dashed #CBD5E1;
-      padding-top: 12px;
-    }
-
-    /* Manifiesto */
-    .manifesto-section {
-      padding: 80px 0;
-      text-align: center;
-    }
-    .manifesto-card {
-      background: #000000;
-      color: #FFFFFF;
-      border-radius: 24px;
-      padding: 56px 36px;
-      max-width: 850px;
-      margin: 0 auto;
-      box-shadow: 0 20px 40px -10px rgba(0,0,0,0.25);
-    }
-    .manifesto-card h2 {
-      font-size: 30px;
-      font-weight: 900;
-      margin-bottom: 24px;
-      color: #FFFFFF;
-    }
-    .manifesto-card p {
-      font-size: 17px;
-      color: #CBD5E1;
-      line-height: 1.8;
-      margin-bottom: 24px;
-    }
-    .manifesto-footer {
-      font-size: 15px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      color: #BAE6FD;
-      text-transform: uppercase;
-    }
-
-    /* Footer */
-    footer {
-      background: #FFFFFF;
-      border-top: 1px solid var(--border);
-      padding: 40px 0 24px;
-      text-align: center;
-    }
-    .footer-logo {
-      height: 40px;
-      width: auto;
-      margin-bottom: 16px;
-    }
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 24px;
-    }
-    .footer-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-    }
-    .footer-links a:hover {
-      color: var(--text);
-    }
-    .footer-copy {
-      font-size: 13px;
-      color: #94A3B8;
-    }
-  </style>
+  <!-- Hoja de Estilos Externa -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -374,8 +28,8 @@
     </div>
   </header>
 
-  <!-- Hero Principal -->
   <main>
+    <!-- Hero Principal -->
     <section class="hero">
       <div class="container">
         <img src="nekopinlogo.png" alt="Nekopin" class="hero-main-logo">
@@ -435,8 +89,17 @@
           <p class="section-desc">Soluciones y desarrollos nacidos bajo la infraestructura de Nekopin.</p>
         </div>
 
+        <!-- Filtro JS -->
+        <div class="filter-controls">
+          <button class="btn-filter active" data-filter="all">Todos</button>
+          <button class="btn-filter" data-filter="code">Nekopin Code</button>
+          <button class="btn-filter" data-filter="academy">Nekopin Academy</button>
+          <button class="btn-filter" data-filter="games">Nekopin Games</button>
+          <button class="btn-filter" data-filter="stories">Nekopin Stories</button>
+        </div>
+
         <div class="projects-grid">
-          <div class="project-card">
+          <div class="project-card" data-category="code">
             <div>
               <div class="project-meta">
                 <span class="project-badge badge-code">Nekopin Code</span>
@@ -447,18 +110,18 @@
             <div class="project-endorse">Proyecto &bull; Desarrollado por NEKOPIN CODE</div>
           </div>
 
-          <div class="project-card">
+          <div class="project-card" data-category="code">
             <div>
               <div class="project-meta">
                 <span class="project-badge badge-code">Nekopin Code</span>
               </div>
-              <h4>Pizza Troquer POS</h4>
+              <h4>Pizza Troquer POS & KDS</h4>
               <p>Módulo táctil para toma de comandas por niveles y despacho ágil de cocina en tiempo real.</p>
             </div>
             <div class="project-endorse">Proyecto &bull; Desarrollado por NEKOPIN CODE</div>
           </div>
 
-          <div class="project-card">
+          <div class="project-card" data-category="academy">
             <div>
               <div class="project-meta">
                 <span class="project-badge badge-academy">Nekopin Academy</span>
@@ -502,5 +165,7 @@
     </div>
   </footer>
 
+  <!-- Script Externo -->
+  <script src="main.js"></script>
 </body>
 </html>
