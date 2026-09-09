@@ -35,9 +35,9 @@
       padding: 0 24px;
     }
 
-    /* Header & Hero */
+    /* Header */
     header {
-      padding: 32px 0;
+      padding: 16px 0;
       border-bottom: 1px solid var(--border);
       background: var(--card-bg);
     }
@@ -46,15 +46,31 @@
       justify-content: space-between;
       align-items: center;
     }
-    .brand-title {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 1px;
+    .brand-logo-header {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+    .brand-tagline {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
+    /* Hero */
     .hero {
       text-align: center;
-      padding: 72px 0 48px;
+      padding: 60px 0 40px;
+    }
+    .hero-main-logo {
+      height: 125px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: 24px;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.06));
     }
     .hero-badge {
       display: inline-block;
@@ -67,16 +83,16 @@
       margin-bottom: 16px;
     }
     .hero h1 {
-      font-size: 40px;
+      font-size: 38px;
       font-weight: 800;
       line-height: 1.2;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     .hero p {
       font-size: 18px;
       color: var(--text-muted);
       max-width: 620px;
-      margin: 0 auto 24px;
+      margin: 0 auto 20px;
     }
     .slogan {
       font-style: italic;
@@ -88,43 +104,51 @@
     .section-title {
       font-size: 24px;
       font-weight: 800;
-      margin: 48px 0 24px;
+      margin: 48px 0 28px;
       text-align: center;
     }
     .divisions-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
       margin-bottom: 64px;
     }
     .card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 16px;
       padding: 24px;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.08);
+    }
+    .card-logo {
+      height: 95px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: 16px;
     }
     .card-stripe {
-      height: 6px;
-      width: 40px;
-      border-radius: 3px;
-      margin-bottom: 16px;
+      height: 4px;
+      width: 36px;
+      border-radius: 2px;
+      margin-bottom: 12px;
     }
     .card h3 {
       font-size: 18px;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 8px;
     }
     .card p {
       font-size: 14px;
       color: var(--text-muted);
-      flex-grow: 1;
+      line-height: 1.5;
     }
 
     /* Footer */
@@ -142,13 +166,15 @@
 
   <header>
     <div class="container nav-wrap">
-      <div class="brand-title">NEKOPIN</div>
-      <div>Estudio Creativo</div>
+      <img src="nekopinlogo.png" alt="Nekopin" class="brand-logo-header">
+      <div class="brand-tagline">Estudio Creativo</div>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
+      <img src="nekopinlogo.png" alt="Nekopin Estudio Creativo" class="hero-main-logo">
+      <br>
       <span class="hero-badge">Estudio Creativo</span>
       <h1>Ideas que se hacen realidad</h1>
       <p>Transformamos conceptos en proyectos educativos, software funcional, videojuegos e historias.</p>
@@ -159,24 +185,28 @@
 
     <section class="divisions-grid">
       <article class="card">
+        <img src="nekopinacademy.png" alt="Nekopin Academy" class="card-logo">
         <div class="card-stripe" style="background-color: var(--academy);"></div>
         <h3>Nekopin Academy</h3>
         <p>Cursos, capacitaciones y experiencias educativas prácticas y accesibles.</p>
       </article>
 
       <article class="card">
+        <img src="nekopinCode.png" alt="Nekopin Code" class="card-logo">
         <div class="card-stripe" style="background-color: var(--code);"></div>
         <h3>Nekopin Code</h3>
         <p>Desarrollo de software, sistemas a medida y soluciones digitales robustas.</p>
       </article>
 
       <article class="card">
+        <img src="nekopinGames.png" alt="Nekopin Games" class="card-logo">
         <div class="card-stripe" style="background-color: var(--games);"></div>
         <h3>Nekopin Games</h3>
         <p>Videojuegos, experiencias interactivas y entretenimiento experimental.</p>
       </article>
 
       <article class="card">
+        <img src="nekopinstories.png" alt="Nekopin Stories" class="card-logo">
         <div class="card-stripe" style="background-color: var(--stories);"></div>
         <h3>Nekopin Stories</h3>
         <p>Creación, edición y publicación de narrativa y universos de ficción.</p>
