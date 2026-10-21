@@ -1,0 +1,50 @@
+/* ==========================================================================
+   NEKOPIN · Variables y Tokens de Diseño
+   Conserva estrictamente la paleta de colores e identidad visual oficial.
+   ========================================================================== */
+
+:root {
+  /* Colores Base */
+  --bg: #F8FAFC;
+  --card-bg: #FFFFFF;
+  --text: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --primary: #000000;
+
+  /* Colores Oficiales por División */
+  --academy: #02488B;
+  --games: #422052;
+  --stories: #EFA400;
+  --code: #0285BD;
+
+  /* Superficies suaves derivadas de los colores oficiales */
+  --academy-soft: rgba(2, 72, 139, 0.08);
+  --academy-border: rgba(2, 72, 139, 0.24);
+  --games-soft: rgba(66, 32, 82, 0.08);
+  --games-border: rgba(66, 32, 82, 0.25);
+  --stories-soft: rgba(239, 164, 0, 0.12);
+  --stories-border: rgba(239, 164, 0, 0.35);
+  --code-soft: rgba(2, 133, 189, 0.08);
+  --code-border: rgba(2, 133, 189, 0.26);
+
+  /* Tipografías */
+  --font-main: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-tech: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Radios y Sombras */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  --shadow-xs: 0 2px 8px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 6px 18px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 12px 28px -6px rgba(15, 23, 42, 0.12);
+  --shadow-lg: 0 20px 40px -10px rgba(15, 23, 42, 0.28);
+
+  /* Curvas de Transición */
+  --bounce-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}

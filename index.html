@@ -3,91 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NEKOPIN · Estudio Creativo. Proporcionamos estructura, diseño y desarrollo para convertir conceptos en software funcional, experiencias educativas y juegos físicos o digitales.">
   <title>NEKOPIN · Estudio Creativo</title>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600;1,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600;1,800&display=swap" rel="stylesheet">
+
+  <!-- Hojas de estilo organizadas por responsabilidad -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 <body>
 
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
   <!-- Navegación -->
-  <header>
-    <div class="container nav-wrap">
-      <img src="nekopinlogo.png" alt="Nekopin Estudio Creativo" class="brand-logo-header">
-      <nav class="nav-links">
-        <a href="#divisiones">Divisiones</a>
-        <a href="#manifiesto">Manifiesto</a>
-        
-        <!-- Icono Instagram -->
-        <a href="https://www.instagram.com/nekopin.estudio?stkn=MWZoYmluYW41dGliNQ==" target="_blank" rel="noopener" class="social-btn" title="Instagram" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-          </svg>
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-wrap">
+        <a href="#inicio" class="brand-link" aria-label="Nekopin Estudio Creativo · Ir al inicio">
+          <img src="assets/img/brand/nekopin-logo.png" alt="Nekopin Estudio Creativo" class="brand-logo-header" width="120" height="69">
         </a>
 
-        <!-- Icono Facebook -->
-        <a href="https://www.facebook.com/share/18YuotupzP/" target="_blank" rel="noopener" class="social-btn" title="Facebook" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-          </svg>
-        </a>
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="#divisiones" class="nav-item-link">Divisiones</a>
+          <a href="#proyectos" class="nav-item-link">Proyectos y Juegos</a>
+          <a href="#manifiesto" class="nav-item-link">Manifiesto</a>
 
-        <a href="mailto:nekopinstudio@gmail.com" class="btn-header">Contacto</a>
+          <!-- Icono Instagram -->
+          <a href="https://www.instagram.com/nekopin.estudio?stkn=MWZoYmluYW41dGliNQ==" target="_blank" rel="noopener noreferrer" class="social-btn" title="Instagram" aria-label="Instagram de Nekopin">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+
+          <!-- Icono Facebook -->
+          <a href="https://www.facebook.com/share/18YuotupzP/" target="_blank" rel="noopener noreferrer" class="social-btn" title="Facebook" aria-label="Facebook de Nekopin">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+
+          <a href="mailto:nekopinstudio@gmail.com" class="btn-header">Contacto</a>
+        </nav>
+      </div>
+
+      <!-- Navegación rápida visible en pantallas móviles -->
+      <nav class="mobile-nav-bar" aria-label="Secciones del sitio en móvil">
+        <a href="#divisiones" class="mobile-nav-link">Divisiones</a>
+        <a href="#proyectos" class="mobile-nav-link">Proyectos y Juegos</a>
+        <a href="#manifiesto" class="mobile-nav-link">Manifiesto</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="contenido-principal">
     <!-- Hero Principal -->
-    <section class="hero">
-      <div class="container">
-        <img src="nekopinlogo.png" alt="Nekopin" class="hero-main-logo">
-        <br>
-        <span class="hero-badge">Estudio Creativo</span>
+    <section id="inicio" class="hero">
+      <div class="container reveal is-visible">
+        <img src="assets/img/brand/nekopin-logo.png" alt="Nekopin" class="hero-main-logo" width="225" height="130">
+        <div>
+          <span class="hero-badge">Estudio Creativo</span>
+        </div>
         <h1>Ideas que se hacen realidad</h1>
         <p>Proporcionamos estructura, diseño y desarrollo para convertir conceptos en software funcional, experiencias educativas y juegos físicos o digitales.</p>
-        <div class="slogan-pill">«Cercana en el trato. Seria en el compromiso.»</div>
+        <div>
+          <div class="slogan-pill">«Cercana en el trato. Seria en el compromiso.»</div>
+        </div>
+        <div class="hero-actions">
+          <a href="#proyectos" class="btn-primary">Explorar Juegos y Proyectos</a>
+          <a href="#divisiones" class="btn-secondary">Ver Divisiones</a>
+        </div>
       </div>
     </section>
 
     <!-- Centro de Divisiones -->
     <section id="divisiones" class="divisions-section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Ecosistema Nekopin</span>
           <h2 class="section-title">Nuestras Divisiones</h2>
           <p class="section-desc">Selecciona una división para explorar sus sistemas y proyectos en desarrollo.</p>
         </div>
 
         <div class="divisions-grid">
           <!-- Card Academy -->
-          <article class="card academy" data-division="academy">
-            <img src="nekopinacademy.png" alt="Nekopin Academy" class="card-logo">
+          <article class="card academy reveal reveal-delay-1" data-division="academy" tabindex="0" role="button" aria-label="Abrir detalles de Nekopin Academy">
+            <img src="assets/img/brand/nekopin-academy.png" alt="Nekopin Academy" class="card-logo" width="95" height="95" loading="lazy">
             <h3>Nekopin Academy</h3>
             <p>Formación práctica, talleres didácticos y recursos estructurados de aprendizaje.</p>
+            <span class="card-meta-footer"><span class="card-count-text">Explorar →</span></span>
           </article>
 
           <!-- Card Code -->
-          <article class="card code" data-division="code">
-            <img src="nekopinCode.png" alt="Nekopin Code" class="card-logo">
+          <article class="card code reveal reveal-delay-2" data-division="code" tabindex="0" role="button" aria-label="Abrir detalles de Nekopin Code">
+            <img src="assets/img/brand/nekopin-code.png" alt="Nekopin Code" class="card-logo" width="95" height="95" loading="lazy">
             <h3>Nekopin Code</h3>
             <p>Desarrollo a medida, sistemas locales offline, arquitectura web y soluciones claras.</p>
+            <span class="card-meta-footer"><span class="card-count-text">Explorar →</span></span>
           </article>
 
           <!-- Card Games -->
-          <article class="card games" data-division="games">
-            <img src="nekopinGames.png" alt="Nekopin Games" class="card-logo">
+          <article class="card games reveal reveal-delay-3" data-division="games" tabindex="0" role="button" aria-label="Abrir detalles de Nekopin Games">
+            <img src="assets/img/brand/nekopin-games.png" alt="Nekopin Games" class="card-logo" width="95" height="95" loading="lazy">
             <h3>Nekopin Games</h3>
             <p>Diseño de juegos de cartas físicos, experiencias de mesa y desarrollo independiente.</p>
+            <span class="card-meta-footer"><span class="card-count-text">Explorar →</span></span>
           </article>
 
           <!-- Card Stories -->
-          <article class="card stories" data-division="stories">
-            <img src="nekopinstories.png" alt="Nekopin Stories" class="card-logo">
+          <article class="card stories reveal reveal-delay-4" data-division="stories" tabindex="0" role="button" aria-label="Abrir detalles de Nekopin Stories">
+            <img src="assets/img/brand/nekopin-stories.png" alt="Nekopin Stories" class="card-logo" width="95" height="95" loading="lazy">
             <h3>Nekopin Stories</h3>
             <p>Laboratorio de narrativa, construcción de universos y proyectos literarios en desarrollo.</p>
+            <span class="card-meta-footer"><span class="card-count-text">Explorar →</span></span>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catálogo de Proyectos, Juegos y Servicios -->
+    <section id="proyectos" class="projects-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Catálogo Activo</span>
+          <h2 class="section-title">Proyectos, Juegos y Servicios</h2>
+          <p class="section-desc">Accede directamente a nuestros videojuegos publicados en línea, recursos educativos y soluciones de software desarrolladas en el estudio.</p>
+        </div>
+
+        <!-- Filtros por división -->
+        <div class="catalog-filters reveal" role="group" aria-label="Filtrar catálogo por división">
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">
+            Todos
+          </button>
+          <button type="button" class="filter-btn" data-filter="games" aria-pressed="false">
+            <span class="filter-dot games" aria-hidden="true"></span>
+            Nekopin Games
+          </button>
+          <button type="button" class="filter-btn" data-filter="code" aria-pressed="false">
+            <span class="filter-dot code" aria-hidden="true"></span>
+            Nekopin Code
+          </button>
+          <button type="button" class="filter-btn" data-filter="academy" aria-pressed="false">
+            <span class="filter-dot academy" aria-hidden="true"></span>
+            Nekopin Academy
+          </button>
+          <button type="button" class="filter-btn" data-filter="stories" aria-pressed="false">
+            <span class="filter-dot stories" aria-hidden="true"></span>
+            Nekopin Stories
+          </button>
+        </div>
+
+        <!-- Contenedor dinámico inyectado desde assets/js/data.js -->
+        <div id="projectsGrid" class="projects-grid reveal" aria-live="polite">
+          <!-- Tarjetas de proyectos generadas dinámicamente -->
         </div>
       </div>
     </section>
@@ -95,7 +168,7 @@
     <!-- Manifiesto -->
     <section id="manifiesto" class="manifesto-section">
       <div class="container">
-        <div class="manifesto-card">
+        <div class="manifesto-card reveal">
           <h2>Manifiesto Nekopin</h2>
           <p>
             «Nekopin nace de las ideas. Ideas grandes, pequeñas, extrañas, útiles, divertidas o difíciles de explicar. No todas tendrán el mismo destino. Algunas se convertirán en historias. Otras en juegos. Otras en cursos. Otras en software. Algunas quizá nunca lleguen a terminarse.
@@ -109,40 +182,42 @@
   </main>
 
   <!-- MODAL FLOTANTE CENTRAL DINÁMICO (CERO BOTÓN X) -->
-  <div id="divisionModal" class="modal-overlay">
-    <div class="modal-content" id="modalContainer">
+  <div id="divisionModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalDivisionTitle" aria-hidden="true">
+    <div class="modal-content" id="modalContainer" tabindex="-1">
       <div class="modal-header-brand">
-        <img id="modalDivisionLogo" src="" alt="División Logo" class="modal-division-logo">
+        <img id="modalDivisionLogo" src="assets/img/brand/nekopin-logo.png" alt="División Logo" class="modal-division-logo">
         <div>
           <h3 id="modalDivisionTitle">Nombre División</h3>
           <span id="modalDivisionTag" class="modal-division-tag">Área</span>
         </div>
       </div>
-      
+
       <div class="modal-body-content" id="modalBodyDynamic">
         <!-- Tarjetas dinámicas inyectadas por JS -->
       </div>
-      
-      <div class="modal-hint">Toca cualquier parte fuera de esta ventana para cerrar</div>
+
+      <div class="modal-hint">Toca cualquier parte fuera de esta ventana o presiona Esc para cerrar</div>
     </div>
   </div>
 
   <!-- Pie de página -->
-  <footer>
+  <footer class="site-footer">
     <div class="container">
-      <img src="nekopinlogo.png" alt="Nekopin" class="footer-logo">
+      <img src="assets/img/brand/nekopin-logo.png" alt="Nekopin" class="footer-logo" width="66" height="38" loading="lazy">
       <div class="footer-socials">
-        <a href="https://www.instagram.com/nekopin.estudio?stkn=MWZoYmluYW41dGliNQ==" target="_blank" rel="noopener" class="social-btn" title="Instagram">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <a href="https://www.instagram.com/nekopin.estudio?stkn=MWZoYmluYW41dGliNQ==" target="_blank" rel="noopener noreferrer" class="social-btn" title="Instagram" aria-label="Instagram de Nekopin">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
         </a>
-        <a href="https://www.facebook.com/share/18YuotupzP/" target="_blank" rel="noopener" class="social-btn" title="Facebook">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        <a href="https://www.facebook.com/share/18YuotupzP/" target="_blank" rel="noopener noreferrer" class="social-btn" title="Facebook" aria-label="Facebook de Nekopin">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
         </a>
       </div>
       <p class="footer-copy">Nekopin &bull; Estudio Creativo. Desarrollado con dedicación y rigor.</p>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <!-- Scripts organizados por responsabilidad -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
