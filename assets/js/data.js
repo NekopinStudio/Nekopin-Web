@@ -84,7 +84,7 @@ window.NEKOPIN_DATA = {
       status: 'Aula Virtual Activa',
       isLive: true,
       btnText: 'Acceder al Aula Virtual →',
-      btnUrl: 'https://nekopin.milaulas.com/login/index.php',
+      btnUrl: 'https://nekopin.milaulas.com/course/view.php?id=3',
       image: null
     },
     {
